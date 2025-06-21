@@ -125,6 +125,10 @@ socket.on("disaster_updated", (msg) => {
 function showUpdateForm(id, title, description) {
   const form = document.getElementById("updateForm");
   form.style.display = "block";
+
+  const header = document.getElementById("updateFormHeader");
+  header.style.display = "block";
+
   form.id.value = id;
   form.title.value = title;
   form.description.value = description;
