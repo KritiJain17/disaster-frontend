@@ -1,4 +1,4 @@
-const apiBase = "http://localhost:3000/api";
+const apiBase = "https://disaster-relief-management.onrender.com/api";
 
 // Create Disaster
 document
@@ -90,7 +90,7 @@ async function loadResources(disasterId) {
   });
 }
 
-const socket = io("http://localhost:3000");
+const socket = io("https://disaster-relief-management.onrender.com/");
 
 socket.on("connect", () => console.log("🔌 Still connected"));
 
