@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Disaster Dashboard</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  </head>
+  <body>
+    <h1>Disaster Dashboard</h1>
+
+    <h2>Create Disaster</h2>
+    <form id="disasterForm">
+      <input name="title" placeholder="Title" required /><br />
+      <input name="location_name" placeholder="Location Name" required /><br />
+      <input name="description" placeholder="Description" required /><br />
+      <input name="tags" placeholder="Tags (comma separated)" required /><br />
+      <input name="lat" placeholder="Latitude" required /><br />
+      <input name="lon" placeholder="Longitude" required /><br />
+
+      <button type="submit">Create</button>
+    </form>
+    <h3 id="updateFormHeader" style="display: none">Update Disaster</h3>
+    <form id="updateForm" style="display: none">
+      <input type="hidden" name="id" />
+      <input name="title" placeholder="Title" required />
+      <input name="description" placeholder="Description" required />
+      <button type="submit">Update</button>
+    </form>
+
+    <h2>All Disasters</h2>
+    <ul id="disasterList"></ul>
+
+    <h3 id="liveDisasterHeader" style="display: none">Live Disaster Updates</h3>
+    <div id="liveFeed"></div>
+
+    <h3 id="socialHeader" style="display: none">Social Media Feed</h3>
+    <div id="socialMediaFeed"></div>
+
+    <h3 id="resourceHeader" style="display: none">Resource Feed</h3>
+    <div id="resourceFeed"></div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
